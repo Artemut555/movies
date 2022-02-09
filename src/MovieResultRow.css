@@ -1,0 +1,27 @@
+.component-movie-result-row {
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  height: 180px;
+  width: 1000px;
+  position: relative;
+  cursor: pointer;
+}
+
+.component-movie-result-row:hover {
+  background-color: #eee;
+}
+
+.component-movie-result-row img {
+  width: 140px;
+  height: 180px;
+  padding-right: 10px;
+}
+
+.component-movie-result-row .title {
+  position: relative;
+  padding-left: 30px;
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  top: -150px;
+}
