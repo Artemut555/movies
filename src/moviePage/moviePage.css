@@ -1,0 +1,29 @@
+.movie-page {
+    right: 100px;
+    display: flex;
+    flex-direction: row;
+}
+
+.poster {
+    right: 100px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.button {
+    padding-top: 20px;
+    align-self: center;
+}
+
+.poster img {
+    width: 400px;
+    height: 600px;
+}
+
+.poster span {
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+}

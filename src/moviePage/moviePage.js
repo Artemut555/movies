@@ -1,9 +1,9 @@
-import {Link, Outlet, useParams} from "react-router-dom";
-import {getMovie} from "./movieFinder";
+import {useParams} from "react-router-dom";
+import {getMovie} from "../movieFinder";
 import React, {useEffect, useState} from "react";
-import filterMovie from "./filterMovie";
-import RatingButton from "./RatingButton";
-import  MovieService  from './MovieService';
+import {RatingButton} from "../RatingButton";
+import  MovieService  from '../MovieService';
+import "./moviePage.css";
 
 const  customersService  =  new  MovieService();
 
@@ -25,12 +25,14 @@ export default function MoviePage() {
     }
 
     return (
-        <div
-            className="movie-page"
-        >
-            <RatingButton rateChange={handleRatingChange}/>
-            <img src={movie?.Poster} />
-            <span className="title">{movie?.Title}</span>
+        <div className="movie-page">
+            <div className="poster">
+                <img src={movie?.Poster} />
+                <span className="title">{movie?.Title}</span>
+            </div>
+            <div className="button">
+                <RatingButton rateChange={handleRatingChange}/>
+            </div>
         </div>
     )
 }

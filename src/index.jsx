@@ -1,7 +1,7 @@
 import React from "react";
 import App from "./App";
 import "./index.css";
-import MoviePage from "./moviePage";
+import MoviePage from "./moviePage/moviePage";
 
 import { render } from "react-dom";
 import {

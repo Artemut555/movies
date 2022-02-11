@@ -1,5 +1,4 @@
 import React, { PureComponent } from "react";
-import PropTypes from "prop-types";
 import "./MovieResultRow.css";
 import {Link} from "react-router-dom";
 import { Outlet } from "react-router-dom";
@@ -20,10 +19,10 @@ export default class MovieResultsRow extends PureComponent {
           className="component-movie-result-row"
       >
         <nav>
-          <img src={src} />
+          <img src={src} alt={"img"}/>
           <span className="title">{this.props.title}</span>
           <span className="rating">Оценка: {rating}</span>
-          <Link to={url}>Оценить</Link>
+          <Link className="link" to={url}>Оценить</Link>
         </nav>
         <Outlet />
       </div>

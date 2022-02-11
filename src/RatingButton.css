@@ -1,18 +1,22 @@
 .component-rating-button {
-    /*right: 100px;*/
-    /*top: 50px;*/
-    /*position: relative;*/
+    display: flex;
+    align-content: center;
+    margin-left: 10rem;
+    min-width: 15rem;
 }
 
 .component-rating-button input {
-    width: 16px;
-    height: 16px;
+    width: 32px;
+    height: 32px;
+    position: relative;
+    top: 8px;
+}
 
-    border: 2px solid #999;
-    transition: 0.2s all linear;
-    outline: none;
-    margin-right: 5px;
+.component-rating-button label {
+    font-size: 22px;
+}
 
-    /*position: relative;*/
-    top: 4px;
+.ratingForm {
+    display: flex;
+    flex-direction: column;
 }

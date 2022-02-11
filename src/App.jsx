@@ -3,8 +3,8 @@ import Header from "./Header";
 import SearchInput from "./SearchInput";
 import MovieResults from "./MovieResults";
 import filterMovie from "./filterMovie";
-import RatingButton from "./RatingButton";
-import { Link } from "react-router-dom";
+import {RatingButton} from "./RatingButton";
+import styles from "./App.css";
 
 export default class App extends PureComponent {
   constructor(props) {
@@ -51,11 +51,15 @@ export default class App extends PureComponent {
 
   render() {
     return (
-      <div>
+      <div className="wrapper">
         <Header />
-        <RatingButton rateChange={this.handleRatingChange}/>
+
         <SearchInput textChange={this.handleSearchChange} />
-        <MovieResults movieData={this.state.filteredMovie} />
+        <div className={"listBody"}>
+          <MovieResults movieData={this.state.filteredMovie} />
+          <RatingButton rateChange={this.handleRatingChange}/>
+        </div>
+
       </div>
     );
   }

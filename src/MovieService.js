@@ -3,8 +3,6 @@ const API_URL = 'http://localhost:8000';
 
 export default class MovieService {
 
-    constructor(){}
-
     getMovies() {
         const url = `${API_URL}/api/films/`;
         return axios.get(url).then(response => response.data);

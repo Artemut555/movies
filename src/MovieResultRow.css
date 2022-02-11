@@ -2,7 +2,8 @@
   border-bottom: 1px solid #ccc;
   padding: 10px;
   height: 180px;
-  width: 1000px;
+  /*width: 1000px;*/
+  max-width: 70rem;
   position: relative;
   cursor: pointer;
 }
@@ -18,10 +19,27 @@
 }
 
 .component-movie-result-row .title {
-  position: relative;
+  /*position: relative;*/
   padding-left: 30px;
   font-family: "Helvetica Neue", sans-serif;
   font-weight: bold;
   font-size: 24px;
-  top: -150px;
+  top: -300px;
+}
+
+.component-movie-result-row .link {
+  /*position: relative;*/
+  /*padding-left: 30px;*/
+  padding-left: 30px;
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.component-movie-result-row .rating {
+  /*position: relative;*/
+  padding-left: 30px;
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  font-size: 24px;
 }
