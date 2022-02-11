@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // const API_URL = 'http://localhost:8000';
-const API_URL = '165.227.133.27';
+const API_URL = 'http://165.227.133.27';
 
 export default class MovieService {
 
