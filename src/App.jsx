@@ -11,37 +11,47 @@ export default class App extends PureComponent {
     super(props);
     this.state = {
       rating: 0,
-      filteredMovie: filterMovie("", 0,20)
+      text: "",
+      filteredMovie: [],
     };
   }
 
+  componentDidMount() {
+    filterMovie("", 0,20).then(result => {
+      this.setState({
+        rating: 0,
+        text: "",
+        filteredMovie: result,
+      })
+    })
+  }
+
   handleSearchChange = event => {
-    this.setState({
-      rating: this.state.rating,
-      filteredMovie: filterMovie(event.target.value, 0,20)
-    });
-  };
+    let rate = this.state.rating;
+    filterMovie(event.target.value, rate, 20).then(result => {
+      this.setState({
+        rating: rate,
+        text: event.target.value,
+        filteredMovie: result
+      });
+    })
+  }
 
   handleRatingChange = event => {
-    this.setState({
-      rating: this.state.rating,
-      filteredMovie: filterMovie(this.state.filteredMovie, 0,20)
-    });
-    console.log(event.target.value);
+    let txt = this.state.text;
+    let target = Number.parseInt(event.target.value, 10);
+    filterMovie(txt, target,20).then(result => {
+      this.setState({
+        rating: target,
+        text: txt,
+        filteredMovie: result
+      });
+    })
   };
 
   render() {
     return (
       <div>
-        <h1>Bookkeeper</h1>
-        <nav
-            style={{
-              borderBottom: "solid 1px",
-              paddingBottom: "1rem"
-            }}
-        >
-          {/*<Link to="/expenses">Expenses</Link>*/}
-        </nav>
         <Header />
         <RatingButton rateChange={this.handleRatingChange}/>
         <SearchInput textChange={this.handleSearchChange} />

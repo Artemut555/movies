@@ -1,7 +1,8 @@
 import React from "react";
 import App from "./App";
 import "./index.css";
-// import Routing from "./Routing";
+import MoviePage from "./moviePage";
+
 import { render } from "react-dom";
 import {
     BrowserRouter,
@@ -9,13 +10,12 @@ import {
     Route
 } from "react-router-dom";
 
-import {Expenses} from "./expenses";
-
-console.log(BrowserRouter);
-
 render(
-    <Expenses />,
-
-    // <App />,
+    <BrowserRouter>
+        <Routes>
+            <Route path="/" element={<App />} />
+            <Route path=":invoiceId" element={<MoviePage />} />
+        </Routes>
+    </BrowserRouter>,
     document.getElementById("root")
 );
